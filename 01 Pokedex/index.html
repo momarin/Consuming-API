@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+
+    <!-- LINKS -->
+    <!-- favcon -->
+    <link
+      rel="shortcut icon"
+      href="favicons/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Main JS -->
+     <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- pokemon image -->
+      <img
+        src="#"
+        alt="pokemon"
+        class="pokemon-image"
+      />
+
+      <!-- pokemon data -->
+      <h1 class="pokemon-data">
+        <!-- tudo em lowcase pq os dados da API retornam as info em lowcase -->
+        <span class="pokemon-number"></span> -
+        <span class="pokemon-name"></span>
+      </h1>
+
+      <!-- form -->
+      <form class="form">
+        <input
+          type="search"
+          class="input-search"
+          placeholder="Name or Number"
+          required
+        />
+      </form>
+
+      <!-- buttons -->
+      <div class="buttons">
+        <button class="button btn-prev">Prev &lt;</button>
+        <button class="button btn-next">Next &gt;</button>
+      </div>
+
+      <!-- pokedex image -->
+      <img src="img/pokedex.png" alt="pokedex" class="pokedex" />
+    </main>
+  </body>
+</html>

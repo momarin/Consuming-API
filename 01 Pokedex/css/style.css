@@ -1,0 +1,110 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Reset global
+---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+/* Body
+--------------------------------- */
+body {
+    text-align: center;
+    background: linear-gradient(to bottom,#6ab7f5, #fff);
+    min-height: 100vh; /* min-height p 100% da viewport, esticando o background */
+}
+
+/* Main
+--------------------------------- */
+main {
+    display: inline-block; /* alterando a largura da tag main para que seja apenas do tamanho da img */
+    margin-top: 2%;
+    padding: 15px; /* pokedex n fica colada nas margins do mobile */
+    position: relative; /* fazendo com q os elementos absolute respeitem a position do main*/
+}
+
+/* Imagem da pokedex
+--------------------------------- */
+.pokedex {
+    width: 100%; /* como a tag main n tem width definido, esse 100% acaba sendo exatamente o tamanho da imagem; técnica para remover o scroll lateral */
+    max-width: 425px;
+}
+
+/* Pokemon img, data and name
+--------------------------------- */
+.pokemon-image {
+    position: absolute;
+    bottom: 55%; /* referente ao tamanho do main */
+    left: 50%; /* referente ao tamanho do main */
+    transform: translate(-63%, 20%); /* referente ao tamanho da img */
+    height: 18%;
+}
+
+.pokemon-data {
+    position: absolute;
+    font-weight: 600;
+    font-size: clamp(.5rem, 5vw, 1.563rem); /* font-size: clamp(min, default, max); */
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+}
+
+.pokemon-name {
+    color: #3a444d;
+    text-transform: capitalize; /* transforma somente a 1 letra da palavra*/
+}
+
+/* Form
+--------------------------------- */
+.form {
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.input-search {
+    width: 100%;
+    padding: 4%;
+    outline: none; /* removendo a borda*/
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(.5rem, 5vw, 1rem);
+    /* box-shadow: x y desfoque cor; */
+    box-shadow: -3px 4px 0 #888, -5px 6.5px 0 #333; /* sombra atras de sombra p dar o efeito da linha preta, como na pokedex*/
+}
+
+/* Buttons
+--------------------------------- */
+.buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-56.5%, 0);
+    display: flex; /* colocando buttons inline */
+    gap: 20px;
+}
+
+.button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(.5rem, 5vw, 1rem);
+    font-weight: 600;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.button:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
