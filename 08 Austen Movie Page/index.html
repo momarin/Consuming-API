@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS ------------------------------------------------->
+    <!-- Materialize Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.css"
+      integrity="sha512-ywmPbuxGS4cJ7GxwCX+bCJweeext047ZYU2HP52WWKbpJnF4/Zzfr2Bo19J4CWPXZmleVusQ9d//RB5bq0RP7w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Austen Filmography | Animated Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">AustenMovies</a>
+      <!-- navbar -->
+      <ul class="nav">
+        <li>
+          <a href="#" aria-label="Home"><i class="bi bi-house-heart"></i></a>
+        </li>
+        <li><a href="#">Romance</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Trend</a></li>
+        <li><a href="#">My List</a></li>
+      </ul>
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <i class="bi bi-search-heart" aria-hidden="true"></i>
+      </div>
+    </header>
+    <!-- banner -->
+    <div class="banner">
+      <main>
+        <div class="content pride-and-prejudice active">
+          <img
+            src="/images/title-pride-and-prejudice.png"
+            alt=""
+            class="movie-title"
+          />
+          <h4>
+            <span>2005</span>
+            <span><i>L</i></span>
+            <span>2h 9min</span>
+            <span>Romantic Drama</span>
+          </h4>
+          <p>
+            When headstrong Elizabeth Bennet meets the aloof and arrogant Mr.
+            Darcy, they must overcome their first impressions to find love in
+            Regency-era England.
+          </p>
+          <div class="button">
+            <a href="#"><i class="bi bi-play-circle"></i>Watch</a>
+            <a href=""><i class="bi bi-plus-lg"></i>My List</a>
+          </div>
+        </div>
+        <div class="content emma">
+          <img
+            class="movie-title"
+            src="/images/title-emma.webp"
+            alt="Movie Name"
+          />
+          <h4>
+            <span>2020</span>
+            <span><i>L</i></span>
+            <span>2h 4min</span>
+            <span>Romantic Comedy</span>
+          </h4>
+          <p>
+            Wealthy matchmaker Emma Woodhouse meddles in relationships but misreads her own heart. A vibrant adaptation of Austen's comedy of manners, culminating in self-discovery and love.
+          </p>
+          <div class="button">
+            <a href="#"><i class="bi bi-play-circle"></i>Watch</a>
+            <a href=""><i class="bi bi-plus-lg"></i>My List</a>
+          </div>
+        </div>
+        <div class="content sense-and-sensibility">
+          <img
+            class="movie-title"
+            src="/images/title-sense-and-sensibility.png"
+            alt="Movie Name"
+          />
+          <h4>
+            <span>1995</span>
+            <span><i>L</i></span>
+            <span>2h 16min</span>
+            <span>Period Drama</span>
+          </h4>
+          <p>
+            The Dashwood sisters—rational Elinor and passionate Marianne—navigate heartbreak and societal pressures. Hugh Grant, Emma Thompson and Kate Winslet stars in this poignant tale of love and resilience.
+          </p>
+          <div class="button">
+            <a href="#"><i class="bi bi-play-circle"></i>Watch</a>
+            <a href=""><i class="bi bi-plus-lg"></i>My List</a>
+          </div>
+        </div>
+        <div class="content northanger-abbey">
+          <img
+            class="movie-title"
+            src="/images/title-northanger-abbey.png"
+            alt="Movie Name"
+          />
+          <h4>
+            <span>2007</span>
+            <span><i>L</i></span>
+            <span>1h 33min</span>
+            <span>Gothic Romance</span>
+          </h4>
+          <p>
+            Felicity Jones plays Catherine Morland, a bookish young woman who imagines Gothic dramas in real life. A witty satire of Austen's era with a charming love story.
+          </p>
+          <div class="button">
+            <a href="#"><i class="bi bi-play-circle"></i>Watch</a>
+            <a href=""><i class="bi bi-plus-lg"></i>My List</a>
+          </div>
+        </div>
+        <div class="content persuasion">
+          <img
+            class="movie-title"
+            src="/images/title-persuasion.png"
+            alt="Movie Name"
+          />
+          <h4>
+            <span>2007</span>
+            <span><i>L</i></span>
+            <span>1h 33min</span>
+            <span>Romantic Drama</span>
+          </h4>
+          <p>
+            Anne Elliot reconnects with Captain Wentworth, whom she was persuaded to reject years earlier. A mature second-chance romance with Austen’s signature emotional depth.
+          </p>
+          <div class="button">
+            <a href="#"><i class="bi bi-play-circle"></i>Watch</a>
+            <a href=""><i class="bi bi-plus-lg"></i>My List</a>
+          </div>
+        </div>
+      </main>
+      <!-- carousel section -->
+      <section>
+        <div class="carousel-container">
+          <div class="carousel">
+            <!-- Pride and Prejudice -->
+            <div
+              class="carousel-item"
+              onclick="changeBG('bg-pride-and-prejudice.jpg', 'pride-and-prejudice');"
+            >
+              <img src="/images/banner-pride-and-prejudice.webp" />
+            </div>
+            <!-- Emma -->
+            <div
+              class="carousel-item"
+              onclick="changeBG('bg-emma.webp', 'emma');"
+            >
+              <img src="/images/banner-emma.jpg" />
+            </div>
+            <!-- Sense and Sensibility -->
+            <div
+              class="carousel-item"
+              onclick="changeBG('bg-sense-and-sensibility.webp', 'sense-and-sensibility');"
+            >
+              <img src="/images/banner-sense-and-sensibility.jpg" />
+            </div>
+            <!-- Northanger Abbey -->
+            <div
+              class="carousel-item"
+              onclick="changeBG('bg-northanger-abbey.avif', 'northanger-abbey');"
+            >
+              <img src="/images/banner-northanger-abbey.jpg" />
+            </div>
+            <!-- Persuasion -->
+            <div
+              class="carousel-item"
+              onclick="changeBG('bg-persuasion.jpg', 'persuasion');"
+            >
+              <img src="/images/banner-persuasion.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <a href="#" class="play" onClick="toggleVideo();"
+          ><i class="bi bi-play"></i>Watch Trailer</a
+        >
+      </section>
+      <!-- social section -->
+      <section>
+        <ul class="sci">
+          <li>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- trailer section -->
+    <section>
+      <div class="trailer">
+        <video
+          src="assets/Yuri on ice Yuri hugs everyone.mp4"
+          muted
+          controls="true"
+          autoplay="true"
+        ></video>
+        <i class="bi bi-x" onClick="toggleVideo();"></i>
+      </div>
+    </section>
+
+    <!-- SCRIPT ---------------------------------------------->
+    <!-- JQuery min -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
