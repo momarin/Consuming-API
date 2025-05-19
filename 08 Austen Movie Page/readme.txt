@@ -1,4 +1,4 @@
-# AustenMovies
+# AustenMovies - uma homenagem à minh autora favorita
 
 # Características principais:
     - Todo o conceito do site foi alterado, mantendo apenas o esqueleto e funções;
