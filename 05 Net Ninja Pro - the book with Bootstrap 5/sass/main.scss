@@ -1,0 +1,24 @@
+// custom variables
+$primary: #c29938;
+$secondary: #b59f72;
+$light: #fbf5e5;
+
+// import the functions, then the variables
+// OBS: must be after the custom variables, otherwise will overwrite them.
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// map value. the parenthesis denote that`s a map
+$custom-theme-colors: (
+    "altlight": #d8c9a3,
+    // "altdark": 	#b59f72
+
+);
+
+// merging the custom theme map with the original theme map
+// read the function: theme-colors now is the merge of the two maps --> theme-colors and custom-theme-colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// import bootstrap
+// amalgamation of all bootstrap raw sass files
+@import '../node_modules/bootstrap/scss/bootstrap';

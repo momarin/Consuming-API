@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+body {
+    width: 100vw;
+}
+
+/* custom color palette */
+:root {
+    --blue: #22223b;
+    --beige: #f2e9e4;
+    --dark-beige: #c9ada7;
+}
