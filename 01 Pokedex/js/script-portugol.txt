@@ -1,0 +1,76 @@
+/* ----------------------------------------------------------------------- */
+// VARIÁVEIS GLOBAIS
+var pokemonNome = documento.selecionar(".pokemon-name");
+var pokemonNumero = documento.selecionar(".pokemon-number");
+var pokemonImagem = documento.selecionar(".pokemon-image");
+
+var formulario = documento.selecionar(".form");
+var entradaPesquisa = documento.selecionar(".input-search");
+
+var botaoAnterior = documento.selecionar('.btn-prev');
+var botaoProximo = documento.selecionar('.btn-next');
+
+var pesquisarPokemon = 25;
+
+/* ----------------------------------------------------------------------- */
+// FUNÇÕES
+
+funcao buscarPokemon(pokemon) {
+  var respostaAPI = requisitar(
+    `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+  );
+
+  se (respostaAPI.status === 200) {
+    var dados = respostaAPI.json();
+    retornar dados;
+  }
+}
+
+funcao renderizarPokemon(pokemon) {
+  pokemonNome.innerHTML = 'Carregando';
+  pokemonNumero.innerHTML = '';
+
+  var dados = buscarPokemon(pokemon);
+
+  se (dados) {
+    pokemonImagem.estilo.exibir = 'bloco';
+    pokemonNome.innerHTML = dados.nome;
+    pokemonNumero.innerHTML = dados.id;
+
+    pokemonImagem.src =
+      dados["sprites"]["versions"]["generation-v"]["black-white"]["animated"][
+        "front_default"
+      ];
+
+    entradaPesquisa.valor = '';
+    pesquisarPokemon = dados.id;
+  } senao {
+    pokemonImagem.estilo.exibir = 'nenhum';
+    pokemonNome.innerHTML = 'Não encontrado :(';
+    pokemonNumero.innerHTML = '';
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+// EVENTOS
+
+formulario.adicionarEvento('submit', funcao(e) {
+  e.prevenirPadrao();
+  renderizarPokemon(entradaPesquisa.valor.paraMinusculas());
+});
+
+botaoAnterior.adicionarEvento('clique', funcao() {
+    se (pesquisarPokemon > 1) {
+        pesquisarPokemon -= 1;
+    renderizarPokemon(pesquisarPokemon);
+    }
+});
+
+botaoProximo.adicionarEvento('clique', funcao() {
+    pesquisarPokemon += 1;
+    renderizarPokemon(pesquisarPokemon);
+});
+
+/* ----------------------------------------------------------------------- */
+// INICIALIZAÇÃO
+renderizarPokemon(pesquisarPokemon);
